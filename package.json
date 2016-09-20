@@ -13,6 +13,7 @@
   "author": "Jianfeng, Jianbin, Zhewei",
   "license": "MIT",
   "dependencies": {
+    "httpdispatcher": "^1.0.0",
     "mongodb": "^2.2.10"
   }
 }

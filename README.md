@@ -12,7 +12,7 @@ Remember Jenkins uses the port 8080 by default, so we need to open this port. Yo
 ## Target project
 We built a demo rails application used to do version control and triger git hook. You can find the repository [here](https://github.ncsu.edu/DevOps-Milestones/m1_demo_rails_project).
 
-## Jenkins
+## Jenkins and GitHub
 ### Git installation
  In order to let Jenkins do continuous integration with GitHub, we installed Git on AWS EC2 (`sudo apt-get install git`). Git installation is quite easy, however, at very beginning we did not install Git and an error happened (Jenkins could not run git).
 ### Set Git executable path

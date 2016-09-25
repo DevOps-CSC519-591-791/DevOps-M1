@@ -17,7 +17,7 @@ We built a demo rails application used to do version control and triger git hook
  In order to let Jenkins do continuous integration with GitHub, we installed Git on AWS EC2 (`sudo apt-get install git`). Git installation is quite easy, however, at very beginning we did not install Git and an error happened (Jenkins could not run git).
 ### Set Git executable path
  After installing Git, we need to set the git path in Jenkins. For Jenkins verion 2.7.4, we set the path by going through `Manage Jenkins >Global Tool Configuration > Git> Path to Git executable`.And you can always find the path of Git on your machine by typing `which git`. (Reference: http://stackoverflow.com/questions/8639501/jenkins-could-not-run-git)
-### Build and config Jenkins project and GitHub repository
+### Config Jenkins project and GitHub repository
 - We built a freestyle Jenkins project named Milestone-rails-project-master. We chose this project is a GitHub project and pasted the corresponding URL (https://github.ncsu.edu/DevOps-Milestones/m1_demo_rails_project.git/).
 - For source code management, we chose Git as version control system and pasted the ssh url (https://github.ncsu.edu/DevOps-Milestones/m1_demo_rails_project). After that we generated the public key and private key. Then we  added the private key as Jenkins credential and added public key as repository deploy key. Then for credential dropdown in source code management, we chose the credencial just created. The default branch is master branch, we can specific any other existed branches.
 ![source code management](https://lh3.googleusercontent.com/fvriC6ch4ou2sCZD4H4Mkh4Q2AaFgL37YeBCoWE0Q7TB4RG23z8OFhvM2rw4wlbMItCTklximQ=w1920-h1080-rw-no)

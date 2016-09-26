@@ -1,7 +1,7 @@
 # DevOps-M1
-- Jianfeng Chen (jchen37): Build AWS EC2 and install Jenkins;
-- Jianbin Chen (jchen45):  Record video;
-- Zhewei Hu (zhu6):        Config Jenkins and GitHub.
+- Jianfeng Chen (jchen37): Build AWS EC2, install Jenkins;
+- Jianbin Chen (jchen45):  Record video, write README;
+- Zhewei Hu (zhu6):        Config Jenkins and GitHub, write README.
 
 ### Preparation
 #### Target Project
@@ -70,7 +70,7 @@ We created a job simply by copying from first job. It is because the configurati
 ![Multiple jobs](https://lh3.googleusercontent.com/irvW-Jn3VcrQ2RyKhp9ZkResiXxXpeod3zyVKxaOn3WdIC5f8t_GhbZ6sUdSTKCJ1zY8Tt6CqA=w1920-h1080-rw-no)
 
 #### TASK5: `track and display a history of past builds`  
-
+![History list](https://lh3.googleusercontent.com/59MnWyk2BoLSlF5rYo6yf8unO0Rhvb1cmrkzG0KaiYZjV2gyIn0uyyEjfV7BhxJu__NpgzIooQ=w1920-h1080-rw-no)
 
 ### Other Config of Jenkins and GitHub
 - We built a freestyle Jenkins project named Milestone-rails-project-master. We chose this project is a GitHub project and pasted the corresponding URL (https://github.ncsu.edu/DevOps-Milestones/m1_demo_rails_project.git/).

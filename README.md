@@ -51,6 +51,18 @@ rake db:migrate RAILS_ENV=test
 cp config/secrets.yml.example config/secrets.yml
 rake test
 ```
+- If build job is successful, you will see the console output similar to below, which means all the test cases are passed.
+```
+# Running:
+
+..............
+
+Finished in 0.333464s, 41.9836 runs/s, 77.9695 assertions/s.
+
+14 runs, 26 assertions, 0 failures, 0 errors, 0 skips
+No emails were triggered.
+Finished: SUCCESS
+```
 
 ### Multiple Jobs corresponding to Multiple Branches
 We created a job simply by copying from first job. It is because the configurations of these two jobs are almost the same. The only difference is the specified branch.

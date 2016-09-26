@@ -1,5 +1,5 @@
 # DevOps-M1
-Jianfeng Chen (jchen37), Janbin Chen (jchen45), Zhewei Hu (zhu6)
+Jianfeng Chen (jchen37), Jianbin Chen (jchen45), Zhewei Hu (zhu6)
 ##  Install Jenkins
 At first, we built an AWS EC2 instance and installed Jenkins on it.
 ```

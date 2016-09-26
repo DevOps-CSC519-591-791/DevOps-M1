@@ -1,4 +1,5 @@
 # DevOps-M1
+Jianfeng Chen (jchen37), Janbin Chen (jchen45), Zhewei Hu (zhu6)
 ##  Install Jenkins
 At first, we built an AWS EC2 instance and installed Jenkins on it.
 ```
@@ -9,15 +10,15 @@ sudo apt-get install jenkins
 ```
 Remember Jenkins uses the port 8080 by default, so we need to open this port. You can access [our server](http://54.205.110.11:8080/) now (username: `admin`, password: `5a8bf4eab5444fcc99cb9bb724fdb0d9`).
 
-## Target project
+## Target Project
 We built a demo rails application used to do version control and triger git hook. You can find the repository [here](https://github.ncsu.edu/DevOps-Milestones/m1_demo_rails_project).
 
 ## Jenkins and GitHub
-### Git installation
+### Git Installation
  In order to let Jenkins do continuous integration with GitHub, we installed Git on AWS EC2 (`sudo apt-get install git`). Git installation is quite easy, however, at very beginning we did not install Git and an error happened (Jenkins could not run git).
-### Set Git executable path
+### Set Git Executable Path
  After installing Git, we need to set the git path in Jenkins. For Jenkins verion 2.7.4, we set the path by going through `Manage Jenkins >Global Tool Configuration > Git> Path to Git executable`.And you can always find the path of Git on your machine by typing `which git`. (Reference: http://stackoverflow.com/questions/8639501/jenkins-could-not-run-git)
-### Config Jenkins project and GitHub repository
+### Config Jenkins and GitHub
 - We built a freestyle Jenkins project named Milestone-rails-project-master. We chose this project is a GitHub project and pasted the corresponding URL (https://github.ncsu.edu/DevOps-Milestones/m1_demo_rails_project.git/).
 - For source code management, we chose Git as version control system and pasted the ssh url (https://github.ncsu.edu/DevOps-Milestones/m1_demo_rails_project). After that we generated the public key and private key. Then we  added the private key as Jenkins credential and added public key as repository deploy key. Then for credential dropdown in source code management, we chose the credencial just created. The default branch is master branch, we can specific any other existed branches.
 ![source code management](https://lh3.googleusercontent.com/fvriC6ch4ou2sCZD4H4Mkh4Q2AaFgL37YeBCoWE0Q7TB4RG23z8OFhvM2rw4wlbMItCTklximQ=w1920-h1080-rw-no)
@@ -28,7 +29,7 @@ We built a demo rails application used to do version control and triger git hook
 - For post-build actions, we enabled email notification. So after each build, we will receive an email about build informations.
 ![Email](https://lh3.googleusercontent.com/Uh4jxo0wc1U0xtgDtk7Th_HLGqKsUqqhcZEx5YYaiDPigTblRk61BheirX2OFF-rlDlQju59kA=w1920-h1080-rw-no)
 
-### Webhook and build job
+### Webhook and Build Job
 - We created a webhook to trigger Jenkins build jobs. And each time the webhook will send a POST request to Jenkins server to trigger build job when a change is pushed to GitHub.
 ![Webhook](https://lh3.googleusercontent.com/mbHm-OnrDJ-ouaUeh5ClPtyE6A9UMNAeo1LFxT6jFZmqB9jIat57eU1m5lctRnYWvCAzPzVpyA=w1920-h1080-rw-no)
 ![POST request](https://lh3.googleusercontent.com/_ihtivGe587N38vKHnfbF4XkRtFVjcUyecpo_Rg6lMuNSkaWL-6fYc38q7RNVjZE3cxrBloSAg=w1920-h1080-rw-no)
@@ -51,6 +52,6 @@ cp config/secrets.yml.example config/secrets.yml
 rake test
 ```
 
-### Multiple jobs corresponding to multiple branches
+### Multiple Jobs corresponding to Multiple Branches
 We created a job simply by copying from first job. It is because the configurations of these two jobs are almost the same. The only difference is the specified branch.
 ![Multiple jobs](https://lh3.googleusercontent.com/irvW-Jn3VcrQ2RyKhp9ZkResiXxXpeod3zyVKxaOn3WdIC5f8t_GhbZ6sUdSTKCJ1zY8Tt6CqA=w1920-h1080-rw-no)

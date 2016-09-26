@@ -1,5 +1,8 @@
 # DevOps-M1
-Jianfeng Chen (jchen37), Jianbin Chen (jchen45), Zhewei Hu (zhu6)
+- Jianfeng Chen (jchen37): Build AWS EC2 and install Jenkins;
+- Jianbin Chen (jchen45):  Record video;
+- Zhewei Hu (zhu6):        Config Jenkins and GitHub.
+
 ##  Install Jenkins
 At first, we built an AWS EC2 instance and installed Jenkins on it.
 ```

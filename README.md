@@ -3,6 +3,8 @@
 - Jianbin Chen (jchen45):  Record video, write README;
 - Zhewei Hu (zhu6):        Config Jenkins and GitHub, write README.
 
+### Screencast
+
 ### Preparation
 #### Target Project
 We built a demo rails application used to do version control and triger git hook. You can find the repository [here](https://github.ncsu.edu/DevOps-Milestones/m1_demo_rails_project).

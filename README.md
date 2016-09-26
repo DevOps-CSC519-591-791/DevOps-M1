@@ -23,7 +23,9 @@ We built a demo rails application used to do version control and triger git hook
 ![source code management](https://lh3.googleusercontent.com/fvriC6ch4ou2sCZD4H4Mkh4Q2AaFgL37YeBCoWE0Q7TB4RG23z8OFhvM2rw4wlbMItCTklximQ=w1920-h1080-rw-no)
 ![Jenkins credential](https://lh3.googleusercontent.com/ULZgAgiaGnz2U2niIItJnC5KfPQVf2I1vysXU2f1UEslL39eyZiqdXjL26ELn_LXTUG5A5WAvA=w1920-h1080-rw-no)
 ![GitHub repo deploy key](https://lh3.googleusercontent.com/UvYv05x5EqX3EABdeROYaPZpV_eMLdJ-ziMlBgJgNoWsY-AwK5JZc0jLZF5DoC2ycLfmVldM6Q=w1920-h1080-rw-no)
-- For build trigger, we chose `Trigger builds remotely` (set token for security purpose) and `Build when a change is pushed to GitHub`. **[screenshots needed]**
 - For post-build actions, we enabled email notification. So after each build, we will receive an email about build informations.**[screenshots needed]**
-- We also added the `Jenkins (GitHub plugin)` services. It provides improved bi-directional integration with GitHub. Allowing you to set up a Service Hook which will hit your Jenkins instance every time a change is pushed to GitHub. **[further check]**
- 
+
+### Webhook and build job
+We created a webhook to trigger Jenkins build jobs. And each time the webhook will send a POST request to Jenkins server to trigger build job when a change is pushed to GitHub.
+![Webhook](https://lh3.googleusercontent.com/mbHm-OnrDJ-ouaUeh5ClPtyE6A9UMNAeo1LFxT6jFZmqB9jIat57eU1m5lctRnYWvCAzPzVpyA=w1920-h1080-rw-no)
+![POST request](https://lh3.googleusercontent.com/_ihtivGe587N38vKHnfbF4XkRtFVjcUyecpo_Rg6lMuNSkaWL-6fYc38q7RNVjZE3cxrBloSAg=w1920-h1080-rw-no)

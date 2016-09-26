@@ -23,7 +23,7 @@ In order to let Jenkins do continuous integration with GitHub, we installed Git 
 #### Set Git Executable Path
 After installing Git, we need to set the git path in Jenkins. For Jenkins verion 2.7.4, we set the path by going through `Manage Jenkins >Global Tool Configuration > Git> Path to Git executable`.And you can always find the path of Git on your machine by typing `which git`. (Reference: http://stackoverflow.com/questions/8639501/jenkins-could-not-run-git)
 
-### Jenkins and GitHub
+### Build Section
 #### TASK1: `trigger a build in response to a git commit via a git hook.`  
 We created a webhook to trigger Jenkins build jobs. And each time the webhook will send a POST request to Jenkins server to trigger build job when a change is pushed to GitHub.
 ![Webhook](https://lh3.googleusercontent.com/mbHm-OnrDJ-ouaUeh5ClPtyE6A9UMNAeo1LFxT6jFZmqB9jIat57eU1m5lctRnYWvCAzPzVpyA=w1920-h1080-rw-no)

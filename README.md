@@ -17,6 +17,8 @@ wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add
 sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 sudo apt-get update
 sudo apt-get install jenkins
+sudo service jenkins start
+curl http://localhost:8080
 ```
 Remember Jenkins uses the port 8080 by default, so we need to open this port. You can access [our server](http://54.205.110.11:8080/) now (username: `admin`, password: `5a8bf4eab5444fcc99cb9bb724fdb0d9`).
 
@@ -85,3 +87,6 @@ We created a job simply by copying from first job. It is because the configurati
 ![Build triggers](https://lh3.googleusercontent.com/G29SMycJBR_cGusMKEaZzuyDwA5FkKNEciv96JNSZ95k-2n9fSvKk1xyZrgKYRompf7_AC4ELA=w1920-h1080-rw-no)
 - For post-build actions, we enabled email notification. So after each build, we will receive an email about build informations.
 ![Email](https://lh3.googleusercontent.com/Uh4jxo0wc1U0xtgDtk7Th_HLGqKsUqqhcZEx5YYaiDPigTblRk61BheirX2OFF-rlDlQju59kA=w1920-h1080-rw-no)
+
+### Reference
+[Install Jenkins on AWS Amazon Linux](https://www.davemaple.com/articles/install-jenkins-on-amazon-linux/)  

@@ -4,7 +4,7 @@
 - Zhewei Hu (zhu6):        Config Jenkins and GitHub, write README.
 
 ### Screencast
-[Screancast](https://youtu.be/2tJWdVBovvI)
+[Screencast](https://youtu.be/2tJWdVBovvI)
 
 ### Preparation
 #### Target Project
